@@ -9,6 +9,7 @@
 <?php
 echo '<div id"div">Hello !</div>'
 ?>
+    <div> bruh </div>
 
 </body>
 </html>
