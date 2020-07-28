@@ -43,8 +43,19 @@ $reponse->closeCursor(); // fin de la reponse
 echo '<div id="div">Hello !</div>'
 ?>
 
-<?= '<div id="div">Hello2 !</div>'
+
+<?php
+$search ='carhibou'; // récupère l'email
+
+$lines = file('email.txt'); // function file() better than fopen()
+foreach($lines as $line){
+    if(strpos($line, $search) !==false)
+    echo 'cet email est déjà dans le fichier';
+    
+}
+
 ?>
+
 
 </body>
 
