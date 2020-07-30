@@ -1,6 +1,13 @@
 <?php
 require('index.php');
-$_SESSION['message'] = '';
+$message ='';
+$messageWelcome ='Vous allez bientot etre contacté par mail';
+$messageError ='cet email est déjà dans le fichier';
+
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +24,8 @@ $_SESSION['message'] = '';
 
 
 
-    <form class="form" action="index.php" method="post" enctype="multipart/form-data" autocomplete="off">
+
+    <form class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">
       
       <input type="text" placeholder="Prenom*" name="firstname" required />
       <input type="text" placeholder="Nom*" name="lastname" required />
@@ -28,8 +36,51 @@ $_SESSION['message'] = '';
       <input type="submit" value="Réservez votre véhicule" name="register" class="btn btn-block btn-primary" />
       </div>
       
-	  <div class="alert alert-error"><?php echo $_SESSION['message']?></div>
-      
+    <div class="emailValid">
+    
+
+        </div>
+    
+
+
+    <?php
+
+if(isset($_POST['firstname']) AND isset($_POST['email']) AND !empty($_POST['firstname']) AND !empty($_POST['email']))
+{
+
+    $name = htmlspecialchars($_POST['firstname']);
+    $email = $_POST['email'];
+    echo '<p>bonjour : ' . $name . '</p>' . '<p id="messageStatut">' . $message . '</p>';
+    
+    // test if email doesnt exist
+
+$search = $email; // récupère l'email
+
+$lines = file('email.txt'); // function file() better than fopen()
+foreach($lines as $line){
+    if(strpos($line, $search) !==false){
+      printf($messageError);
+
+    } 
+    else{
+      // open file
+      $fileToOpen = fopen('email.txt', 'a+');
+      //operation(write email if email doesnt exist)
+      fputs($fileToOpen, ($email));
+      // close file
+      fclose($fileToOpen);
+      printf($messageWelcome);
+
+    }
+  
+} 
+
+
+}
+
+
+
+    ?>
       
     </form>
   </div>

@@ -6,8 +6,9 @@ $dsn = 'mysql:dbname=client;host=127.0.0.1';
 $user = 'root';
 $password = '';
 
+
 try {
-    $dbh = new PDO($dsn, $user, $password);
+    $dbh = new PDO($dsn, $user, $password); // use bdh for all SQL query
 } catch (PDOException $e) {
     echo 'Connexion échouée : ' . $e->getMessage();
 }
@@ -20,27 +21,28 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <title>Document</title>
+    <title>TITRE à changer</title>
 </head>
 <body>
 
 <?php
 
-// Récupération de l'email
-$reponse = $dbh->query('SELECT * FROM tableClient ORDER BY ID DESC ');
+// // Récupération de l'email
+// $reponse = $dbh->query('SELECT * FROM tableClient ORDER BY ID DESC ');
 
+// // VVVVVV database: client/ table: tableClient
+// while ($donnees = $reponse->fetch())
+// { // display data by important input in html
+//     echo '<div id="wrapper"><p id="msg">' . htmlspecialchars($donnees['firstname']) .' : 
+//     ' . '<p id="mail">'. htmlspecialchars($donnees['email']). '<p id="date">'.$donnees['date'] .'
+//     </p></p></p></div>';
+// }
 
-while ($donnees = $reponse->fetch())
-{
-    echo '<div id="wrapper"><p id="msg">' . htmlspecialchars($donnees['name']) .' : 
-    ' . '<p id="mail">'. htmlspecialchars($donnees['email']). '<p id="date">'.$donnees['date'] .'
-    </p></p></p></div>';
-}
+// $reponse->closeCursor(); // close response
 
-$reponse->closeCursor(); // fin de la reponse
+///////// /\/\/\/\/\/\/\/\/\ BDD while (data) Display all contacts exist order by id desc /\/\/\/\/\/\/\/\ //////////
 
-
-
+///////// VVVVVVVVVVVVVVVVVV Insert contact into BDD ///////////////
 
 
 echo '<div id="div">Hello ! 
@@ -51,19 +53,9 @@ You need car for tomorrow, the week end or maybe a whole week <a href="form.php"
 ?>
 
 
-<?php
-$search ='carhibou'; // récupère l'email
 
-$lines = file('email.txt'); // function file() better than fopen()
-foreach($lines as $line){
-    if(strpos($line, $search) !==false)
-    echo 'cet email est déjà dans le fichier';
-    
-}
-
-?>
 
 
 </body>
-<script type="text/javascript" src="main.js"></script>
+<!-- <script type="text/javascript" src="main.js"></script> -->
 </html>
