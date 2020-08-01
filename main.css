@@ -3,3 +3,13 @@
     stroke: red;
 
 }
+#messageError{
+
+}
+#msg{
+
+}
+div{
+    display: flex;
+    flex-direction: row;
+}
