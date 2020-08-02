@@ -1,5 +1,5 @@
 <?php
-require('index.php');
+include('index.php');
 
 $message ='';
 $messageWelcome ='<p id="messageWelcome">Vous allez bientot etre contacté par mail</p>';
@@ -10,24 +10,8 @@ $welcome=false;
 
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main.css">
-
-    <title></title>
-</head>
-<body>
-
-
 <div class="module">
     <h1>Je réserve mon véhicule</h1>
-
-
-
-
 
     <form class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">
       
@@ -67,25 +51,14 @@ if(isset($_POST['firstname']) AND isset($_POST['EMAIL']) AND !empty($_POST['firs
         printf($messageWelcome);
         $welcome =true;
 
-  
       }
-    
   } 
-  
-  
-  }
+}
   ?>
-
-
-      
     </form>
+    
     <?php 
     if($welcome==true){
       include('mailchimp.php');
     }
     ?>
-  </div>
-</div>
-    
-</body>
-</html>

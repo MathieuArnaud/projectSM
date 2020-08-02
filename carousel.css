@@ -1,0 +1,12 @@
+
+div#carousel{
+    display: flex;
+    flex-direction: row;
+    /* width: 100vw; */
+
+}
+.imgCar{
+    /* width: 100%; */
+    width: 15vw;
+    height: 15vh;
+}

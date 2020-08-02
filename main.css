@@ -1,3 +1,7 @@
+body{
+    width: 100%;
+    overflow: hidden;
+}
 #svgHighlight:hover{
     fill: green;
     stroke: red;
@@ -13,3 +17,11 @@ div{
     display: flex;
     flex-direction: row;
 }
+
+#mc_embed_signup
+{
+    position: absolute;
+    background: yellow;
+    top: 30px;
+    left: 300000px;
+  }
