@@ -6,9 +6,6 @@ $messageWelcome ='<p id="messageWelcome">Vous allez bientot etre contacté par m
 $messageError ='<p id="messageError">Cet email est déjà dans le fichier</p>';
 $welcome=false;
 
-
-
-
 ?>
 <div class="module">
     <h1>Je réserve mon véhicule</h1>
@@ -26,7 +23,7 @@ $welcome=false;
       <?php
 if(isset($_POST['firstname']) AND isset($_POST['EMAIL']) AND !empty($_POST['firstname']) AND !empty($_POST['EMAIL']))
   {
-  
+    if(filter_var($_POST['EMAIL'], FILTER_VALIDATE_EMAIL)){
       $name = htmlspecialchars($_POST['firstname']);
       $email = $_POST['EMAIL'];
       echo '<p>bonjour : ' . $name . '</p>' . '<p id="messageStatut">' . $message . '</p>';
@@ -53,6 +50,12 @@ if(isset($_POST['firstname']) AND isset($_POST['EMAIL']) AND !empty($_POST['firs
 
       }
   } 
+      echo 'email valide';
+    } else{
+      echo 'email invalide';
+    }
+  
+ 
 }
   ?>
     </form>

@@ -1,67 +1,117 @@
-/* img{
-    width: auto;
-} */
+
 div#carousel{
     display: flex;
     flex-direction: row;
     width: 100%;
-    width: 90vw;
-    height: 30vh;
+    width: 95vw;
+    /* height: 40vh; */
     border: 1px solid black;
     padding: 0.5%;
-    margin: 0 0 3% 3% ;
-
+    margin: 0 0 1% 1% ;
 }
 
 
-#right, #left, .imgArrow {
-    width: 8vw;
+.imgArrow,#right, #left {
+    width: 6vw;
     height: 30vh;
     display: flex;
+    margin: auto;
 }
+#left:hover{
+scale: 1.2;
+}
+#right:hover{
+    scale: 1.2;
+    }
 
-#c3, #c4, #c5{
+
+.cNone{
 display: none;
 }
-/* #c1, #c2,#c6{
 
-} */
 #carouselContainer{
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     border: 1px solid black;
-    width: 71vw;
-    height: 29vh;
+    width:100%;
+    width: 81vw;
+height: 37vh;
     padding: 0.5%;
-    margin: 0 0 3% 3% ;
+    margin: auto;
 
 }
 .cCenter{
-    width: 47vw;
-    height: 29vh;
+    min-width: 50vw;
+    min-height: 29vh;
     display: flex;
     flex-direction: column;
     font-size: 1vw;
+text-align: center;
+animation-name: scale;
+animation-duration: 2s;
+/* animation-iteration-count:  infinite; */
+
+}
+
+@keyframes scale{
+    from{
+        scale: 0.8;
+    } to{
+        scale: 1;
+    }
 }
 .cLeft, .cRight{
     /* display:none; */
-    width: 12vw;
-    height: 29vh;
+    min-width: 15.5vw;
+    min-height: 29vh;
     display: flex;
     flex-direction: column;
     font-size: 1vw;
+    scale: 0.8;
 }
 .cLeft{
 order: 1;
+max-width: 100%;
+max-height: 100%;
+
 }
 .cRight{
 order: 3;
+max-width: 100%;
+max-height: 100%;
+
 }
 .cCenter{
     order: 2;
-
+    z-index: 300;
 }
-/* .imgCar{
-    max-height: 15Vh;
-    max-width: 15vw;
-} */
+.cCenter:hover{
+    scale: 1.2;
+}
+
+
+div#c0{
+    background:url(cyber1.png);
+    background-size: 100% 100%;
+}
+div#c1{
+    background:url(cyber2.png);
+    background-size: 100% 100%;
+}
+div#c2{
+    background:url(cyber3.png);
+    background-size: 100% 100%;
+}
+div#c3{
+    background:url(cyber4.png);
+    background-size: 100% 100%;
+}
+div#c4{
+    background:url(cyber5.png);
+    background-size: 100% 100%;
+}
+div#c5{
+    background:url(cyber6.png);
+    background-size: 100% 100%;
+}
