@@ -1,0 +1,78 @@
+body{
+	margin: 0;
+	height: 100vh;
+	background-color: black;
+}
+
+#part1{
+	height: 154vh;
+}
+
+#background{
+	width: 100%;
+	display: flex;
+}
+
+#background img{
+	margin: auto;
+}
+
+
+article{
+	font-family: Montserrat, sans-sherif; 
+	font-size: 18px;
+	}
+
+#logo{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 10vw;
+	margin: 10px;
+}
+
+#cybertruck{
+	position: absolute;
+	margin: auto;
+	top: 0.2vw;
+	left: 0;
+	right: 0;
+	width: 20vw;
+}
+
+article p{
+	text-transform: uppercase;
+	color: white;
+	font-size: 1.3vw;
+	letter-spacing: 0.5vw;
+	width: 71vw;
+	margin: auto;
+	position: absolute;
+	text-align: center;
+	top: 37.5vw;
+	left: 0;
+	right: 0;
+}
+
+article button{
+	text-transform: uppercase;
+	font-size: 1vw;
+	border: none;
+	width: 11vw;
+	height: 2.1vw;
+	background-color: #E8F6FF;
+	opacity: 76%;
+	position: relative;
+	bottom: -5.5vw;
+	left: 50%;
+	translate: -50%;
+}
+
+button a{
+	text-decoration: none;
+	color: black;
+}
+
+article video{
+	width: 100%;
+}
