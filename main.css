@@ -25,3 +25,45 @@ div{
     top: 30px;
     left: 300000px;
   }
+
+  .module{
+    font-family: Montserrat;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: black;
+  }
+
+  .module .form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 17vw;
+    justify-content: space-around;
+  }
+
+  .module #condition{
+    text-transform: none;
+  }
+
+  .module h1{
+    color: white;
+  }
+
+  .module input{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .module #condition{
+    color: white;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .module a{
+    text-decoration: none;
+    color: white;
+
+  }

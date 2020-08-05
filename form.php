@@ -15,14 +15,15 @@ $welcome=false;
 
     <form class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">
       
-      <input type="text" placeholder="Prenom*" name="firstname" required />
+      <input type="text" placeholder="Prénom*" name="firstname" required />
       <input type="text" placeholder="Nom*" name="lastname" required />
-      <input type="text"placeholder="N° Telephone" name="telephone" pattern="[0-9]{10}" required /> 
-      <input id="email" type="email" placeholder="Email" name="EMAIL" required />
-      <span id="condition">J'accepte les <a href="">conditions génerales d'utilisations</a><input type="checkbox" name="utilGV" required /></span>
+      <input type="text"placeholder="N° Téléphone*" name="telephone" pattern="[0-9]{10}" required /> 
+      <input id="email" type="email" placeholder="Email*" name="EMAIL" required />
+      <span id="condition"><input type="checkbox" name="utilGV" required/>J'accepte les <a href=""> conditions génerales d'utilisations</a></span>
       <div>
-      <input id="submitForm" type="submit" value="Réservez votre véhicule" name="register" class="btn btn-block btn-primary" />
+        <input id="submitForm" type="submit" value="Réservez votre véhicule" name="register" class="btn btn-block btn-primary" />
       </div>
+
       <?php
 if(isset($_POST['firstname']) AND isset($_POST['EMAIL']) AND !empty($_POST['firstname']) AND !empty($_POST['EMAIL']))
   {
