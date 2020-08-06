@@ -14,11 +14,12 @@
 // 
 
 window.setTimeout(sendMailChimp, 2000);
-window.setTimeout(returnIndex, 2500);
+
 
    function sendMailChimp() {
-     console.log("Wait Nerd… email send to mailchimp : " + document.getElementById("mce-EMAIL").value);
+     alert("Wait Nerd… email send to mailchimp : " + document.getElementById("mce-EMAIL").value);
      document.getElementById("mc-embedded-subscribe").click();
+     window.setTimeout(returnIndex, 500);
    }
    function returnIndex(){
     window.location="index.php";
