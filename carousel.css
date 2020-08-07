@@ -3,25 +3,47 @@ div#carousel{
     display: flex;
     flex-direction: row;
     width: 100%;
-    width: 95vw;
+    width: 97vw;
     /* height: 40vh; */
     border: 1px solid black;
-    padding: 0.5%;
+    /* padding: 0.5%; */
     margin: 0 0 1% 1% ;
 }
 
 
 .imgArrow,#right, #left {
-    width: 6vw;
+
+    width: 3vw;
     height: 30vh;
     display: flex;
     margin: auto;
+    background-color: rgba(126, 42, 42, 0.5);
+}
+#left{
+
+    z-index: 301;
+    left: 3vw;
+    top: 15vh;
+}
+#right{
+    z-index: 301;
+    right: 3vw;
+    top: 15vh;
+    
 }
 #left:hover{
-scale: 1.2;
+    width: 3vw;
+transform: scaleZ(1.4);
+cursor: pointer;
+border: 1px solid black;
+border-radius: 5%;
+background-color: rgba(255, 255, 255, 0.5);
 }
 #right:hover{
-    scale: 1.2;
+    transform: scaleY(1.2);
+    width: 3vw;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
     }
 
 
@@ -35,7 +57,7 @@ display: none;
     flex-direction: row;
     border: 1px solid black;
     width:100%;
-    width: 81vw;
+    width: 94vw;
 height: 47vh;
     padding: 0.5%;
     margin: auto;
@@ -57,19 +79,20 @@ animation-duration: 2s;
 @keyframes scale{
     from{
         text-align: end;
-        scale: 0.8;
+        transform: scale(0.8);
     } to{
         text-align: center;
-        scale: 1;
+        transform: scale(1);
     }
 }
 .cLeft, .cRight{
+    /* display: none; */
     min-width: 15.5vw;
     min-height: 29vh;
     display: flex;
     flex-direction: column;
     font-size: 1vh;
-    scale: 0.8;
+    transform: scale(0.8);
 }
 .cLeft{
 order: 1;
@@ -90,7 +113,7 @@ max-height: 100%;
     align-items: flex-end; */
 }
 .cCenter:hover{
-    scale: 1.1;
+    transform: scale(1.1);
     
 }
 
@@ -137,4 +160,17 @@ span{
     font-family: roboto;
     color: #fff;
     width: max-content;
+}
+
+@media only screen and (max-width: 600px){
+    .cLeft, .cRight{
+        display: none;
+        min-width: 15.5vw;
+        min-height: 29vh;
+        
+        flex-direction: column;
+        font-size: 1vh;
+        transform: scale(0.8);
+    }
+
 }

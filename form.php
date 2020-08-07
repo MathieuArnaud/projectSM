@@ -9,8 +9,10 @@
       <input type="text" placeholder="Nom*" name="lastname" required />
       <input type="text"placeholder="N° Telephone" name="telephone" pattern="[0-9]{10}" required /> 
       <input id="email" type="email" placeholder="Email" name="EMAIL" required />
-      <span id="condition">J'accepte les <a href=""><p>conditions génerales d'utilisations</p></a><input type="checkbox" name="utilGV" required /></span>
-      <div>
+      
+      <div id="divColumn">
+      <span id="condition"><p>J'accepte les<a href="https://www.tesla.com/about/legal#payment-terms-for-services"> conditions génerales d'utilisations</p></a>
+      <input type="checkbox" name="utilGV" required /></span>
       <input id="submitForm" type="submit" value="Réservez votre véhicule" name="register" class="btn btn-block btn-primary" />
       </div>
     </form>

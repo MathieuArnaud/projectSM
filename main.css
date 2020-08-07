@@ -20,6 +20,10 @@ div{
     top: 30px;
     left: 300000px;
   }
+  #divColumn{
+font-size: 2vh;
+  }
+
 
   .module{
     font-family: Montserrat;
@@ -57,6 +61,10 @@ div{
     color: white;
     display: flex;
     flex-direction: row;
+    /* font-size: 1.2vw; */
+  }
+  span #condition{
+    font-size: 1.2vw;
   }
 
   .module a{
@@ -140,8 +148,12 @@ div.btn{
         color: #fff;
         font-size: 1vw;
 }
-div.btn :hover{
-  scale: 1.1;
+.btn :hover{
+  transform: scale(1.1);
+  cursor: default;
+}
+.clicked :hover{
+  transform: scale(1.1);
   cursor: default;
 }
 
@@ -177,4 +189,13 @@ font-size: 2vh;
 }
 .status{
   display: none;
+}
+
+@media only screen and (max-width: 600px){
+  body{
+/* display: none; */
+display: flex;
+flex-direction: column;
+}
+
 }
