@@ -10,27 +10,29 @@ https://www.figma.com/proto/zBXqYX8hsNg8ftKWXdREAT/Maquette?node-id=20%3A3&scali
 P4 - DEV WEB - Clermont-Ferrand #13598
 Exercice : Réaliser un site permettant la présentation d'un produit et la demande d'une prise de contact pour essayer ce produit.
 
-- ordre des priorités de développement :
+- Ordre des priorités de développement :
 
-En premier on a réaliser le wireframe en s'inspirant de : https://www.tesla.com/fr_fr/cybertruck
-chercher les informations qu'on a eu besoin ou non,
-ensuite on a décidé de faire toute la partie "back" (formulaire fonctionnel) avant de se lancer dans l'aspect "graphique"(carousel en javascript et css)
-///
-- ce qu'on a réussi à implémenter :
-
-Formulaire qui vérifi dans un fichier .txt qu'une chaine de caractère n'est pas à l'interieur et qui écrit à l'interieur si ce n'est pas le cas
-Formulaire mailchimp qui envoi ,une fois les verifications faites sur l'autre formulaire, des donnés avec une simulation de click
-Créer un carousel sans utiliser de librairie
-Presque tout les elements sont responsive
-///
-- ce qu'on a pas réussi à implémenter :
+On a d'abord réalisé le wireframe en s'inspirant de ce site: https://www.tesla.com/fr_fr/cybertruck
+On a cherché les informations dont on a eu besoin ou non.
+Ensuite on a décidé de réaliser toute la partie "back" (formulaire fonctionnel) du site avant de se lancer dans l'aspect "graphique" (carrousel en JavaScript et CSS).
 
 ///
-- difficultés rencontrées :
+- Ce qu'on a réussi à implémenter :
 
-On s'est pas mal mélangé les pinceaux avec le css, la simulation de click ne fonctionne pas sur firefox si on enleve pas la sécurité au niveau du tracking, le formulaire a trop de css inutile, manque de temps ...
-On aurait préféré faire de l'ajax pour envoyer le formulaire mais pareil, manque de temps ...
+Un formulaire qui inscrit une chaîne de caractères dans un fichier .txt si celle-ci n'y est pas déjà inscrite.
+Un formulaire MailChimp qui, une fois les vérifications faites sur le premier formulaire, envoie les données vers MailChimp grâce à une simulation de click.
+Un carrousel créé sans librairie.
+Presque tout les éléments sont responsive.
 
-- ce qu'on a aimé implémenter :
+///
+- Ce qu'on a pas réussi à implémenter :
 
-Le carousel en js, toute la partie "back", 
+///
+- Difficultés rencontrées :
+
+On s'est pas mal mélangé les pinceaux avec CSS, au moment de mettre nos fichiers en commun une grande partie du visuel ne fonctionnait pas. Il y a également beaucoup de lignes inutiles, on pourrait l'optimiser. La simulation de click pour le formulaire MailChimp ne fonctionne pas sur Firefox sans désactiver la sécurité au niveau du tracking. On a manqué de temps pour réaliser certaines choses également, on aurait par exemple préféré faire du Ajax pour envoyer le formulaire...
+
+///
+- Ce qu'on a aimé implémenter :
+
+Le carrousel en JavaScript et toute la partie back.
