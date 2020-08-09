@@ -12,12 +12,12 @@
 
     
 // 
-
-window.setTimeout(sendMailChimp, 2000);
+document.getElementById('mc_embed_signup').style.display="none";
+window.setTimeout(sendMailChimp, 1000);
 
 
    function sendMailChimp() {
-     alert("Wait Nerd… email send to mailchimp : " + document.getElementById("mce-EMAIL").value);
+     alert("Wait Nerd… your email : " + document.getElementById("mce-EMAIL").value + ' will be sent to Mailchimp');
      document.getElementById("mc-embedded-subscribe").click();
      window.setTimeout(returnIndex, 500);
    }

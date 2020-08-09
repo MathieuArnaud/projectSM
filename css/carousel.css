@@ -4,9 +4,7 @@ div#carousel{
     flex-direction: row;
     width: 100%;
     width: 97vw;
-    /* height: 40vh; */
     border: 1px solid black;
-    /* padding: 0.5%; */
     margin: 0 0 1% 1% ;
 }
 
@@ -33,11 +31,11 @@ div#carousel{
 }
 #left:hover{
     width: 3vw;
-transform: scaleZ(1.4);
-cursor: pointer;
-border: 1px solid black;
-border-radius: 5%;
-background-color: rgba(255, 255, 255, 0.5);
+    transform: scaleZ(1.4);
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5%;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 #right:hover{
     transform: scaleY(1.2);
@@ -58,7 +56,7 @@ display: none;
     border: 1px solid black;
     width:100%;
     width: 94vw;
-height: 47vh;
+    height: 47vh;
     padding: 0.5%;
     margin: auto;
 
@@ -69,10 +67,8 @@ height: 47vh;
     display: flex;
     flex-direction: column;
     font-size: 1vw;
-/* text-align: center; */
 animation-name: scale;
 animation-duration: 2s;
-/* animation-iteration-count:  infinite; */
 
 }
 
@@ -86,7 +82,7 @@ animation-duration: 2s;
     }
 }
 .cLeft, .cRight{
-    /* display: none; */
+
     min-width: 15.5vw;
     min-height: 29vh;
     display: flex;
@@ -104,42 +100,42 @@ max-height: 100%;
 order: 3;
 max-width: 100%;
 max-height: 100%;
-/*  */
+
 }
 .cCenter{
     order: 2;
     z-index: 300;
-    /* display: flex;
-    align-items: flex-end; */
+
 }
 .cCenter:hover{
     transform: scale(1.1);
+    font-size: 2vw;
     
 }
 
 
 div#c0{
-    background:url(cyber1.png);
+    background:url(../imgProjectSM/cyber1.png);
     background-size: 100% 100%;
 }
 div#c1{
-    background:url(cyber2.png);
+    background:url(../imgProjectSM/cyber2.png);
     background-size: 100% 100%;
 }
 div#c2{
-    background:url(cyber3.png);
+    background:url(../imgProjectSM/cyber3.png);
     background-size: 100% 100%;
 }
 div#c3{
-    background:url(cyber4.png);
+    background:url(../imgProjectSM/cyber4.png);
     background-size: 100% 100%;
 }
 div#c4{
-    background:url(cyber5.png);
+    background:url(../imgProjectSM/cyber5.png);
     background-size: 100% 100%;
 }
 div#c5{
-    background:url(cyber6.png);
+    background:url(../imgProjectSM/cyber6.png);
     background-size: 100% 100%;
 }
 h3{
@@ -149,7 +145,6 @@ h3{
 }
 p.describCar{
     margin: auto 1.2vw 1.2vw 1.2vw;
-    /* height: 3vh; */
     width: auto;
     background: rgba(255, 255, 255, 0.5);
 }
@@ -171,6 +166,9 @@ span{
         flex-direction: column;
         font-size: 1vh;
         transform: scale(0.8);
+    }
+    p.describCar{
+        font-size: 2vw;
     }
 
 }

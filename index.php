@@ -1,15 +1,9 @@
-<?php 
-session_start();
-/* Connect to MySQL with PDO */
-$dsn = 'mysql:dbname=client;host=127.0.0.1';
-$user = 'root';
-$password = '';
-
+<?php
 
 $message ='';
 $messageWelcome ='<p id="messageWelcome">Vous allez bientot etre contacté par mail</p>';
 $messageError ='<p id="messageError">Cet email est déjà dans le fichier</p>';
-$welcome=false;
+
 
 if(isset($_POST['firstname']) AND isset($_POST['EMAIL']) AND !empty($_POST['firstname']) AND !empty($_POST['EMAIL']))
   {
@@ -49,11 +43,7 @@ if(isset($_POST['firstname']) AND isset($_POST['EMAIL']) AND !empty($_POST['firs
 }
 
 
-try {
-    $dbh = new PDO($dsn, $user, $password); // use bdh for all SQL query
-} catch (PDOException $e) {
-    echo 'Connexion échouée : ' . $e->getMessage();
-}
+
 
 ?>
 
@@ -63,7 +53,8 @@ try {
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../project/css/main.css">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
 
@@ -78,7 +69,7 @@ try {
 			</video>
 			<img id="logo" src="imgProjectSM/tesla2.png">
 			<img id="cybertruck" src="imgProjectSM/cybertruck2.png">
-			<p>La polyvalence d'un pick-up et les performances d'une voiture de sport</p>
+			<p id="polyV">La polyvalence d'un pick-up et les performances d'une voiture de sport</p>
 
 		</div>
 	</article>
@@ -91,5 +82,5 @@ include('form.php');
 <div class="btn"id="btn"><p>Réserver un essai</p></div>
 
 </body>
-<script src="index.js"></script>
+<script src="../project/js/index.js"></script>
 </html>

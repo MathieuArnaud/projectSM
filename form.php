@@ -1,5 +1,5 @@
 
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../project/css/main.css">
 	<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
 <div class="module">
@@ -13,6 +13,6 @@
       <div id="divColumn">
       <span id="condition"><p>J'accepte les<a href="https://www.tesla.com/about/legal#payment-terms-for-services"> conditions génerales d'utilisations</p></a>
       <input type="checkbox" name="utilGV" required /></span>
-      <input id="submitForm" type="submit" value="Réservez votre véhicule" name="register" class="btn btn-block btn-primary" />
+      <input id="submitForm" type="submit" value="Réservez" name="register" class="input-sub" />
       </div>
     </form>

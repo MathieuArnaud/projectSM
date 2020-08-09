@@ -10,8 +10,19 @@ for(let i=0; i<6; i++){ ////////////////////////////////////////// currentEl = a
   currentEl.push(document.getElementById('c'+i).classList.value);
   
 }
-
-
+    window.addEventListener('keyup',(e)=>{
+        switch(e.keyCode){
+            case 37:
+                leftBut.click();
+                break;
+            case 39:
+                rightBut.click();
+                break;
+                default:
+                console.log('keycode : '+e.keyCode + ' key : '+ e.key);
+        }
+    })
+    
     leftBut.addEventListener('click', ()=>{//////////////// left
         firstEl = currentEl[0];
         currentEl.push(firstEl);

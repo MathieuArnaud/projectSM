@@ -1,10 +1,10 @@
 
 
-<link rel="stylesheet" type="text/css" href="carousel.css">
+<link rel="stylesheet" type="text/css" href="../project/css/carousel.css">
 <div id="carousel">
 
     <div id="left">
-        <img src="Left.png" class="imgArrow">
+        <img src="../project/imgProjectSM/Left.png" class="imgArrow">
     </div>
     <div id="carouselContainer">
     <div id="c0" class="cCenter">
@@ -50,13 +50,13 @@
         </div>
     </div>
     <div id="right">
-    <img src="Right.png" class="imgArrow">
+    <img src="../project/imgProjectSM/Right.png" class="imgArrow">
 </div>
 
 
 
 
 </div>
-<script src="carousel.js"></script>
+<script src="../project/js/carousel.js"></script>
 
 

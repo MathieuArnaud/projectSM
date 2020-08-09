@@ -6,16 +6,12 @@ if(isset($_POST['firstname']) AND isset($_POST['EMAIL']) AND !empty($_POST['firs
 }
 
 ?>
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
+
+
 <div id="mc_embed_signup">
 <form action="https://gmail.us17.list-manage.com/subscribe/post?u=c17679294585398743a38dd77&amp;id=cb0a5d7306" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
-	<h2>Subscribe</h2>
+	<!-- <h2>Subscribe</h2> -->
 <div class="mc-field-group">
 
 	<input type="email" value="<?php if(isset($_POST['EMAIL']) AND !empty($_POST['EMAIL'])){echo $email;} ?>" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
@@ -37,6 +33,6 @@ if(isset($_POST['firstname']) AND isset($_POST['EMAIL']) AND !empty($_POST['firs
 
 </form>
 </div>
-<script src="main.js"></script>
+<script src="../project/js/main.js"></script>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 
