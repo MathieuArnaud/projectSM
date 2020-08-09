@@ -8,7 +8,7 @@ console.log(e)
     if(viewVideo==true){
         article.style.display="none";
         divBtn.classList.replace('btn','clicked');
-        divBtn.childNodes[0].innerHTML="Retourner en haut                                                   ";
+        divBtn.childNodes[0].innerHTML="Retourner en haut";
         viewVideo=false;
     } else{
         article.style.display="flex";
