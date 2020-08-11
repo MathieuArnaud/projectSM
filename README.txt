@@ -1,6 +1,7 @@
 # projectSM
 Something u should know :
 This is our first project on Github by Sandrine & me, so take a break and be understanding :)
+All of the files should be in the folder with name "project"
 //////////////////////////////////////////////////////////////////////////////////////////////
 lien du wireframe :
 https://www.figma.com/proto/f7W2dJgyRnYBIwAo2MS6Qp/Wireframe?node-id=1%3A2&scaling=min-zoom
